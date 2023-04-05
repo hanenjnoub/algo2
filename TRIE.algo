@@ -1,0 +1,49 @@
+//tri un par un//
+ALGORITHM Trie                    
+VAR
+    U:ARRAY_OF INTEGER [200]
+    i,j: integer
+BEGIN
+    for i FROM 0 to n-1 DO
+    for j FROM0 to n-1-1 DO
+    if (U[j]>U[j+1]) then
+    permut( U[j] ,U[j+1])
+    END_IF
+    END_FOR
+    END_FOR
+END
+PROCEDURE permut (x,y:integer)
+VAR
+    z:integer
+BEGIN
+    z:=x
+    x:=y
+    y:=z
+END
+//tri avec insertion//
+PROCEDURE InsertionSort(V: ARRAY_OF INTEGER [200]) 
+VAR
+    n:INTEGER
+    i:INTEGER
+    j:INTEGER
+BEGIN
+    n:=length V 
+    for i=1 to n-1 DO
+    j:=i
+    WHILE (j>0 and V[j-1]> V[j] ) DO
+    swap( V[j],V[j-1])
+    j:=j-1
+    END_WHILE
+ End_For
+END
+PROCEDURE InsertionTab(B:ARRAY_OF Integer [200])
+VAR
+  i:integer
+  n:integer
+BEGIN
+    for i FROM 0 to n-1 DO
+       write("donner les donnees du tableau")
+    read(B[i])
+      PROCEDURE InsertionSort(V: ARRAY_OF INTEGER [200])
+      END_FOR
+END
