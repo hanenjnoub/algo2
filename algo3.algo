@@ -1,0 +1,14 @@
+FUNCTION palindrome(ch:STRING) : BOOLEAN
+VAR
+ pal: BOOLEAN
+ n:INTEGER
+BEGIN
+  n:=ch.length
+     if(ch="")OR (ch=1)then
+     pal:= TRUE
+     elseif (ch[0]=ch[n-1]) then
+    Palindrome(ch[1,n-2])
+    else
+     pal:=FALSE
+    RETURN pal ;
+END

@@ -1,0 +1,57 @@
+//5!=5*4*3*2*1
+//5!=5*4!
+//n!=n*(n-1)!
+//fonction factorielle
+FUNCTION fact(n:integer) : integer
+VAR
+    rst:INTEGER
+BEGIN
+   rst:=1
+   if (n=0) THEN 
+   rst:=1
+   else
+   rst:= n*fact(n-1)
+   END_IF
+    RETURN rst ;
+END
+FUNCTION powglob(x,n:INTEGER) :INTEGER
+VAR
+    rst:integer
+    i:Integer
+BEGIN
+  rst:=1
+
+    for i FROM 0 to n DO
+          rst:=rst*x
+     end_For
+           
+    RETURN rst ;
+END
+//fonction avecrecursivite
+FUNCTION pow(x,n:INTEGER) :INTEGER
+VAR
+    rst:integer
+    i:Integer
+BEGIN
+  rst:=1
+ if (n=0) then
+    rst:=1
+     else
+     rst:=x*pow(x,n-1)
+     End_if
+    RETURN rst ;
+END
+FUNCTION palindrome(ch:STRING) : BOOLEAN
+VAR
+ pal: BOOLEAN
+ n:INTEGER
+BEGIN
+  n:=ch.length
+     if(ch="")OR (ch=1)then
+     pal:= TRUE
+     elseif (ch[0]=ch[n-1]) then
+    Palindrome(ch[1,n-2])
+    else
+     pal:=FALSE
+    RETURN pal ;
+END
